@@ -73,8 +73,8 @@ a{text-decoration:none;color:inherit;}
 
 /* Loading State Overlay */
 #global-loader { position: fixed; inset: 0; background: var(--cream); z-index: 9999; display: flex; flex-direction: column; align-items: center; justify-content: center; transition: opacity .4s; }
-.spinner { border: 3px solid rgba(196,151,74,.2); border-left-color: var(--gold); border-radius: 50%; width: 40px; height: 40px; animation: spin 1s linear infinite; margin-bottom: 16px; }
-@keyframes spin { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
+.loader-icon { width: 60px; height: auto; margin-bottom: 16px; animation: pulse 2s ease-in-out infinite; }
+@keyframes pulse { 0%, 100% { transform: scale(1); opacity: 1; } 50% { transform: scale(1.05); opacity: 0.8; } }
 
 /* ════════════════════════════════════════
    NAVIGATION
@@ -285,9 +285,9 @@ tbody tr:hover td { background: #FDFAF7; }
 
 <!-- GLOBAL LOADER: Shows skeleton immediately, hides once Firebase data arrives -->
 <div id="global-loader">
-  <div class="spinner"></div>
+  <img src="bfd8face51854f69734e121f8b1ed92f.jpg" alt="Online Shop" class="loader-icon">
   <div style="font-family:var(--serif);font-size:20px;font-weight:500;color:var(--dark);letter-spacing:.1em;">EL·CREDO</div>
-  <div style="font-size:11px;text-transform:uppercase;letter-spacing:.2em;color:var(--stone-400);margin-top:6px;">Connecting to Cloud...</div>
+  <div style="font-size:11px;text-transform:uppercase;letter-spacing:.2em;color:var(--stone-400);margin-top:6px;">Welcome to EL.CREDO</div>
 </div>
 
 <!-- SKELETON shown immediately while loader is still visible (below loader in z-order) -->
